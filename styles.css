@@ -1,0 +1,170 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Fondo con degradado azul-morado */
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4a90e2; /* Cambiado a un azul suave */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px; /* Ajustado para móviles */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #357ab8; /* Cambiado a un azul más oscuro en hover */
+}
+
+main {
+    width: 90%;
+    max-width: 1200px; /* Aumentar el tamaño máximo del contenedor principal */
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 30px 0;
+}
+
+section h2 {
+    color: #ffcc00; /* Color dorado */
+    font-size: 2.4em;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los personajes con marco estilo japonés */
+.personajes-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los personajes se envuelvan en varias filas */
+    justify-content: center; /* Centrar personajes */
+    gap: 20px; /* Espacio entre personajes */
+}
+
+.personaje {
+    background-color: rgba(41, 41, 69, 0.9); /* Fondo oscuro con transparencia */
+    border: 4px solid #2a6496; /* Marco azul */
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 220px; /* Tamaño fijo para cada personaje */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+.personaje img {
+    width: 180px; /* Tamaño de la imagen más grande */
+    height: 180px;
+    border: 5px solid #2a6496; /* Marco azul */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    margin-bottom: 10px;
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+.personaje:hover {
+    transform: scale(1.05); /* Aumentar tamaño en hover */
+}
+
+.personaje h3 {
+    color: #ffd700;
+    margin-top: 10px;
+}
+
+.personaje p {
+    font-size: 0.9em;
+}
+
+/* Estilos para detalles */
+details {
+    margin-top: 10px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffd700; /* Color dorado */
+}
+
+.info-adicional {
+    margin-top: 5px;
+    color: #f0e68c; /* Color dorado claro */
+    font-style: italic;
+}
+
+footer {
+    background-color: #292945;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    width: 100%;
+    position: relative; /* Cambiado a relative para móviles */
+    bottom: 0;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    header nav ul li {
+        margin: 5px 0; /* Espaciado entre los enlaces */
+    }
+
+    section h2 {
+        font-size: 1.8em; /* Tamaño de fuente más pequeño */
+    }
+
+    .personaje {
+        width: 80%; /* Hacer que los personajes ocupen el 80% del ancho en móviles */
+    }
+
+    .personaje img {
+        width: 150px; /* Tamaño de imagen más pequeño */
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.6em; /* Ajustar aún más para pantallas pequeñas */
+    }
+
+    footer {
+        font-size: 0.8em; /* Texto del pie de página más pequeño */
+    }
+}
